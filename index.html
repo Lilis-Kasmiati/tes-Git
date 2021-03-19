@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Miauw</title>
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+      body{ 
+        margin: 0;
+        padding: 0;
+        font-family: sans-serif;
+      }
+      label {
+        position: absolute;
+        width: 45px;
+        height: 21px;
+        right: 20px;
+        top: 20px;
+        border: 2px solid;
+        border-radius: 20px;
+        margin-top: 100px;
+      }
+      label:before {
+        position: absolute;
+        content: '';
+        width: 20px;
+        height: 20px;
+        left: 1px;
+        top: 1px;
+        border-radius: 50%;
+        background: #000;
+        cursor: pointer;
+        transition: 0.5s;
+      }
+      label.active:before {
+        left: 24px;
+        background: #fff;
+      }
+      body.night {
+        background: #000;
+        color: #fff;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <label id="dark-change"></label>
+    </header>
+    <script>
+      var content = document.getElementsByTagName('body')[0];
+      var darkMode = document.getElementById('dark-change');
+      darkMode.addEventListener('click',function(){
+        darkMode.classList.toggle('active');
+        content.classList.toggle('night');
+      })
+    </script>
+    <div class="header">
+      <div class="header-logo">Miauw</div>
+      
+      <div class="header-list">
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Contact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main">
+      <div class="copy-container">
+        <h1> Hi Everyone,</h1>
+        <h2> Welcome to my <span><u>Website</u></span></h2>
+        <h3>In here, I wan to give you something to see</h3>
+      </div>
+    <div class="contents">
+        <h3 class="section-title">I really love my cats, do you want to see them?</h3>
+        <a href="#" class="btn yes"> Yes, I am</a>
+        <p>My Cats</p>
+        <div class="contents-item">
+          <img src="c:/Users/ACER/Desktop/HTML_LILIS KM/cute black.png">
+        </div>
+        <div class="contents-item">
+          <img src="c:/Users/ACER/Desktop/HTML_LILIS KM/cute 1.PNG">
+        </div>
+        <div class="contents-item">
+          <img src="c:/Users/ACER/Desktop/HTML_LILIS KM/images 1.PNG">
+        </div>
+      </div>
+    </div>
+ 
+    <div class="contact-form">
+        <h3 class="section-title">Please tell cat how adorable they are </h3>
+        <p>Name :</p>
+        <input>
+        <p>Email :</p>
+        <input>
+        <input class="contact-submit" type="submit" value="Send">
+      </div>
+    </div>
+    <div class ="footer">
+      <div class ="footer-logo"> GF-Mas Fariz </div>
+    </div>
+</body>
+</html>
+    
